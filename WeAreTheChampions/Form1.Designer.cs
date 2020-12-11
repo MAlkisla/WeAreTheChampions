@@ -37,6 +37,8 @@
             this.dgvMatches = new System.Windows.Forms.DataGridView();
             this.gbNewMatch = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNewMatchCancel = new FontAwesome.Sharp.IconButton();
+            this.btnMatchAdd = new FontAwesome.Sharp.IconButton();
             this.cboNewTeam1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,6 +46,7 @@
             this.cboNewTeam2 = new System.Windows.Forms.ComboBox();
             this.dtpNewDate = new System.Windows.Forms.DateTimePicker();
             this.gbEditMatch = new System.Windows.Forms.GroupBox();
+            this.btnEditMatchCancel = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.nudScore2 = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
@@ -60,9 +63,6 @@
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.pbGif = new System.Windows.Forms.PictureBox();
-            this.btnEditMatchCancel = new FontAwesome.Sharp.IconButton();
-            this.btnNewMatchCancel = new FontAwesome.Sharp.IconButton();
-            this.btnMatchAdd = new FontAwesome.Sharp.IconButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).BeginInit();
             this.gbNewMatch.SuspendLayout();
@@ -195,6 +195,44 @@
             this.label2.TabIndex = 53;
             this.label2.Text = "VS";
             // 
+            // btnNewMatchCancel
+            // 
+            this.btnNewMatchCancel.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnNewMatchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnNewMatchCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNewMatchCancel.IconChar = FontAwesome.Sharp.IconChar.Undo;
+            this.btnNewMatchCancel.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNewMatchCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNewMatchCancel.IconSize = 40;
+            this.btnNewMatchCancel.Location = new System.Drawing.Point(1090, 28);
+            this.btnNewMatchCancel.Name = "btnNewMatchCancel";
+            this.btnNewMatchCancel.Size = new System.Drawing.Size(187, 68);
+            this.btnNewMatchCancel.TabIndex = 52;
+            this.btnNewMatchCancel.Text = "Cancel";
+            this.btnNewMatchCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewMatchCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNewMatchCancel.UseVisualStyleBackColor = false;
+            this.btnNewMatchCancel.Click += new System.EventHandler(this.btnNewMatchCancel_Click);
+            // 
+            // btnMatchAdd
+            // 
+            this.btnMatchAdd.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnMatchAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMatchAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMatchAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnMatchAdd.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMatchAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMatchAdd.IconSize = 40;
+            this.btnMatchAdd.Location = new System.Drawing.Point(856, 29);
+            this.btnMatchAdd.Name = "btnMatchAdd";
+            this.btnMatchAdd.Size = new System.Drawing.Size(156, 68);
+            this.btnMatchAdd.TabIndex = 38;
+            this.btnMatchAdd.Text = "Add";
+            this.btnMatchAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMatchAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMatchAdd.UseVisualStyleBackColor = false;
+            this.btnMatchAdd.Click += new System.EventHandler(this.btnMatchAdd_Click);
+            // 
             // cboNewTeam1
             // 
             this.cboNewTeam1.DisplayMember = "TeamName";
@@ -291,6 +329,25 @@
             this.gbEditMatch.TabStop = false;
             this.gbEditMatch.Text = "Edit Match";
             this.gbEditMatch.Visible = false;
+            // 
+            // btnEditMatchCancel
+            // 
+            this.btnEditMatchCancel.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnEditMatchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEditMatchCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditMatchCancel.IconChar = FontAwesome.Sharp.IconChar.Undo;
+            this.btnEditMatchCancel.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditMatchCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditMatchCancel.IconSize = 40;
+            this.btnEditMatchCancel.Location = new System.Drawing.Point(1091, 143);
+            this.btnEditMatchCancel.Name = "btnEditMatchCancel";
+            this.btnEditMatchCancel.Size = new System.Drawing.Size(187, 68);
+            this.btnEditMatchCancel.TabIndex = 51;
+            this.btnEditMatchCancel.Text = "Cancel";
+            this.btnEditMatchCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditMatchCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditMatchCancel.UseVisualStyleBackColor = false;
+            this.btnEditMatchCancel.Click += new System.EventHandler(this.btnEditMatchCancel_Click);
             // 
             // label12
             // 
@@ -505,63 +562,6 @@
             this.pbGif.TabStop = false;
             this.pbGif.DoubleClick += new System.EventHandler(this.pbGif_DoubleClick);
             // 
-            // btnEditMatchCancel
-            // 
-            this.btnEditMatchCancel.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEditMatchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEditMatchCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditMatchCancel.IconChar = FontAwesome.Sharp.IconChar.Undo;
-            this.btnEditMatchCancel.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditMatchCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditMatchCancel.IconSize = 40;
-            this.btnEditMatchCancel.Location = new System.Drawing.Point(1091, 143);
-            this.btnEditMatchCancel.Name = "btnEditMatchCancel";
-            this.btnEditMatchCancel.Size = new System.Drawing.Size(187, 68);
-            this.btnEditMatchCancel.TabIndex = 51;
-            this.btnEditMatchCancel.Text = "Cancel";
-            this.btnEditMatchCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditMatchCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditMatchCancel.UseVisualStyleBackColor = false;
-            this.btnEditMatchCancel.Click += new System.EventHandler(this.btnEditMatchCancel_Click);
-            // 
-            // btnNewMatchCancel
-            // 
-            this.btnNewMatchCancel.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnNewMatchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnNewMatchCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNewMatchCancel.IconChar = FontAwesome.Sharp.IconChar.Undo;
-            this.btnNewMatchCancel.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNewMatchCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNewMatchCancel.IconSize = 40;
-            this.btnNewMatchCancel.Location = new System.Drawing.Point(1090, 28);
-            this.btnNewMatchCancel.Name = "btnNewMatchCancel";
-            this.btnNewMatchCancel.Size = new System.Drawing.Size(187, 68);
-            this.btnNewMatchCancel.TabIndex = 52;
-            this.btnNewMatchCancel.Text = "Cancel";
-            this.btnNewMatchCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewMatchCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNewMatchCancel.UseVisualStyleBackColor = false;
-            this.btnNewMatchCancel.Click += new System.EventHandler(this.btnNewMatchCancel_Click);
-            // 
-            // btnMatchAdd
-            // 
-            this.btnMatchAdd.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnMatchAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMatchAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMatchAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnMatchAdd.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMatchAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMatchAdd.IconSize = 40;
-            this.btnMatchAdd.Location = new System.Drawing.Point(856, 29);
-            this.btnMatchAdd.Name = "btnMatchAdd";
-            this.btnMatchAdd.Size = new System.Drawing.Size(156, 68);
-            this.btnMatchAdd.TabIndex = 38;
-            this.btnMatchAdd.Text = "Add";
-            this.btnMatchAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMatchAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMatchAdd.UseVisualStyleBackColor = false;
-            this.btnMatchAdd.Click += new System.EventHandler(this.btnMatchAdd_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -586,6 +586,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "We Are The Champions - Sports";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).EndInit();

@@ -247,5 +247,17 @@ namespace WeAreTheChampions
         {
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=goeT7boL1Ks");
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var dr = MessageBox.Show(
+                "Are you sure you want to quit the program?",
+                "Closing Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2);
+
+            e.Cancel = dr == DialogResult.No;
+        }
     }
 }
